@@ -69,5 +69,5 @@ function ENT:OnRemove()
 	util.Effect( "glassimpact", e )
 
 	self:GetCreator():SetNWBool("has_spawn", false)
-	self.player.number = self.player.number - 1
+	self.player.number = self.player.number and (self.player.number - 1)
 end
